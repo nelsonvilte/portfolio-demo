@@ -2,8 +2,16 @@
 
 @import 'animate.css/animate.min';
 
+/*
+  Color del Loading
+*/
+svg path,
+svg rect{
+  fill: black;
+}
+/* animated*/
 .animated {
-  -webkit-animation-duration: 0.8s;
+  -webkit-animation-duration: 1s;
   /*velocidad de transición*/
   animation-duration: 0.6s;
   -webkit-animation-fill-mode: both;

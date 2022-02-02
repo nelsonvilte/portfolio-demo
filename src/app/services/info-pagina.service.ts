@@ -13,18 +13,15 @@ export class InfoPaginaService {
   equipo: any[]=[];
 
   constructor(private http: HttpClient) { 
-    //console.log("Servicio de infopagina listo");
-    //leer archivo json
-   this.cargarInfo();
+     this.cargarInfo();
    this.cargarEquipo();
 
   }
   private cargarInfo(){
     this.http.get('assets/data/data-pagina.json')
     .subscribe((resp:InfoPagina) =>{
-
-      this.cargada=true;
       this.info= resp;
+ 
     });
 
   }
@@ -34,7 +31,7 @@ export class InfoPaginaService {
     .subscribe( ( resp: any) => {
 
       this.equipo= resp;
-      console.log(resp);
+      this.cargada=true;
     });
 
   }
