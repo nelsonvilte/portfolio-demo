@@ -15,11 +15,14 @@ export class ProductosService {
 
   private cargarProductos(){
      this.http.get('https://template-hmtl-angular-default-rtdb.firebaseio.com/productos_idx.json')
-     .subscribe((resp: any)=>{
-       console.log(resp);
+     .subscribe((resp: any) => {
        this.productos=resp;
        this.cargando=false;
      })
 
+  }
+
+  getProducto(id:string){
+    return this.http.get(`https://template-hmtl-angular-default-rtdb.firebaseio.com/productos/${id}.json`)
   }
 }
