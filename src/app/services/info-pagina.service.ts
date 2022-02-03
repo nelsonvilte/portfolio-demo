@@ -20,6 +20,7 @@ export class InfoPaginaService {
   private cargarInfo(){
     this.http.get('assets/data/data-pagina.json')
     .subscribe((resp:InfoPagina) =>{
+      this.cargada=true;
       this.info= resp;
  
     });
@@ -30,8 +31,8 @@ export class InfoPaginaService {
     this.http.get('https://template-hmtl-angular-default-rtdb.firebaseio.com/equipo.json')
     .subscribe( ( resp: any=[]) => {
 
-      this.info= resp;
-      this.cargada=true;
+      this.equipo= resp;
+      
     });
 
   }
