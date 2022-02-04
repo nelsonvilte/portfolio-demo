@@ -1,5 +1,5 @@
-<section *ngIf="producto">
-  <header [ngStyle]="{'background-image':'url(assets/productos/'+id+'/main.jpg)'}"
+<section *ngIf="id">
+  <header [ngStyle]="{'background-image':'url(/assets/productos/'+id+'/main.jpg)'}"
     class="rk-portfolio-cover  item-inside-1">
     <div class="item-inside__meta">
       <h1 class="ae-u-bolder rk-portfolio-title ">{{producto.producto}}</h1>
@@ -35,11 +35,12 @@
         <h4 class="ae-u-bolder">{{producto.subtitulo1}}</h4>
         <p class="ae-eta">{{producto.desc1}} </p>
       </div>
-      <div class="ae-grid__item item-lg-6 item-lg--offset-1"><img src="assets/img/inner-1.jpg" alt="Urku Portfolio">
+      <div class="ae-grid__item item-lg-6 item-lg--offset-1"><img [src]="'assets/productos/'+id+'/pic-1.jpg'"
+          alt="Urku Portfolio">
       </div>
     </div>
     <div class="ae-grid ae-grid--collapse">
-      <div class="ae-grid__item item-lg-8"><img src="assets/img/inner-2.jpg" alt="Urku Portfolio"></div>
+      <div class="ae-grid__item item-lg-8"><img [src]="'assets/productos/'+id+'/pic-2.jpg'" alt="Urku Portfolio"></div>
       <div class="ae-grid__item item-lg-3 item-lg--offset-1 au-lg-ptp-1">
         <p>{{producto.desc2}} </p>
         <p class="ae-u-bolder">{{producto.subtitulo2}}</p>
@@ -55,7 +56,8 @@
       </div>
     </div>
     <div class="ae-grid ae-grid--collapse">
-      <div class="ae-grid__item item-lg--auto"><img src="assets/img/project-1.jpg" alt="Urku Portfolio"></div>
+      <div class="ae-grid__item item-lg--auto"><img [src]="'assets/productos/'+id+'/main.jpg'" alt="Urku Portfolio">
+      </div>
     </div>
     <div class="ae-grid ae-grid--collapse">
       <div class="ae-grid__item item-lg-6"><img src="assets/img/inner-3.jpg" alt="Urku Portfolio"></div>
