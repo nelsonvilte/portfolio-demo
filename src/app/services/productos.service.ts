@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {Producto} from '../interfaces/producto.interface'
+
 @Injectable({
   providedIn: 'root'
 })
@@ -18,7 +19,7 @@ export class ProductosService {
 
      return new Promise<void>((resolve, reject)=>{
       this.http.get('https://template-hmtl-angular-default-rtdb.firebaseio.com/productos_idx.json')
-      .subscribe((resp: any) => {
+      .subscribe((resp: any) =>  {
         this.productos=resp;
         this.cargando=false;
         resolve();
