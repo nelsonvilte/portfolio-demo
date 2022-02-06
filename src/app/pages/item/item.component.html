@@ -17,7 +17,7 @@
   <p>Espere por favor</p>
 </div>
 <section *ngIf="producto">
-  <header *ngIf="id" [ngStyle]="{'background-image':'url(/assets/productos/'+id+'/main.jpg)'}"
+  <header *ngIf="id !== ''" [ngStyle]="{'background-image':'url(/assets/productos/'+id+'/main.jpg)'}"
     class="rk-portfolio-cover  item-inside-1">
     <div class="item-inside__meta">
 
