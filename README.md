@@ -1,4 +1,5 @@
-# Portfolio Demo
+# Portfolio Demo 
+Application developed with Angular, converting an [HTML template](https://www.pixeden.com/html5-website-templates/urku-html5-portfolio-website) into a WebApp, using Firebase as a backend, deploying the website on GitHub Pages. Of the "Angular: Convierte cualquier template HTML en una WebAPP" Course.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.15.
 
